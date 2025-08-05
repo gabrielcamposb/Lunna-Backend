@@ -4,10 +4,13 @@
 
 👥 Equipe
 
-Este projeto está sendo desenvolvido por estudantes da Universidade Unex:
+Este projeto está sendo desenvolvido por:
 
-- Renivaldo Júnior
 - Gabriel Campos
 - Hellen Verena
+- Renivaldo Júnior
 
 Orientador: Prof. Lucas Almeida
+
+UNEX - Centro Universitário de Excelência
+Curso: Sistemas de Informação
