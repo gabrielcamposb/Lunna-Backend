@@ -16,14 +16,14 @@ UNEX - Centro Universitário de Excelência
 Curso: Sistemas de Informação
 
 # 🚀 Como executar o projeto
-# 🔧 Dependências
+🔧 Dependências
 
 Para rodar o projeto, você precisa ter instalado no seu ambiente:
 
-Java 17 (obrigatório)
-Gradle 8.x (ou utilizar o wrapper incluído ./gradlew)
-Spring Boot 3.5.4 (gerenciado automaticamente pelo Gradle)
-Banco de dados H2 (em memória, já configurado no projeto — não é necessário instalar)
+- Java 17 (obrigatório)
+- Gradle 8.x (ou utilizar o wrapper incluído ./gradlew)
+- Spring Boot 3.5.4 (gerenciado automaticamente pelo Gradle)
+- Banco de dados H2 (em memória, já configurado no projeto — não é necessário instalar)
 
 # ⚠️ Importante: versões de Java anteriores a 17 não são compatíveis.
 Recomendamos também utilizar um IDE como IntelliJ IDEA ou VS Code com suporte a Spring Boot
