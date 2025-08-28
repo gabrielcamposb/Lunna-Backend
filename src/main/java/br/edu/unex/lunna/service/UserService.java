@@ -28,11 +28,17 @@ public class UserService implements UserDetailsService {
     }
 
     @Transactional
-    public User register(String email, String rawPassword) {
+    public User register(String email, String hashedPassword) {
         if (repo.existsByEmail(email)) {
             throw new IllegalArgumentException("Email já cadastrado");
         }
-        var user = new User(null, email, passwordEncoder.encode(rawPassword), Role.USER);
+
+        User user = User.builder()
+                .email(email)
+                .password(hashedPassword)
+                .role(Role.USER)
+                .build();
+
         return repo.save(user);
     }
 }
