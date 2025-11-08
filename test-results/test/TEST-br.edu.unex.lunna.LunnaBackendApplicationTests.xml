@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="br.edu.unex.lunna.LunnaBackendApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-11-07T02:59:01.299Z" hostname="DRAX" time="0.331">
+  <properties/>
+  <testcase name="contextLoads()" classname="br.edu.unex.lunna.LunnaBackendApplicationTests" time="0.331"/>
+  <system-out><![CDATA[23:58:56.963 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.edu.unex.lunna.LunnaBackendApplicationTests]: LunnaBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:58:57.079 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.edu.unex.lunna.LunnaBackendApplication for test class br.edu.unex.lunna.LunnaBackendApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.4)
+
+2025-11-06T23:58:57.448-03:00  INFO 8672 --- [lunna-backend] [    Test worker] b.e.u.l.LunnaBackendApplicationTests     : Starting LunnaBackendApplicationTests using Java 17.0.17 with PID 8672 (started by draax in C:\Users\draax\Downloads\Lunna-Backend-main)
+2025-11-06T23:58:57.450-03:00  INFO 8672 --- [lunna-backend] [    Test worker] b.e.u.l.LunnaBackendApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-11-06T23:58:58.052-03:00  INFO 8672 --- [lunna-backend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-06T23:58:58.114-03:00  INFO 8672 --- [lunna-backend] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2025-11-06T23:58:58.516-03:00  INFO 8672 --- [lunna-backend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-06T23:58:58.677-03:00  INFO 8672 --- [lunna-backend] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bf018dd
+2025-11-06T23:58:58.678-03:00  INFO 8672 --- [lunna-backend] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-06T23:58:58.889-03:00  INFO 8672 --- [lunna-backend] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-06T23:58:58.945-03:00  INFO 8672 --- [lunna-backend] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-11-06T23:58:58.993-03:00  INFO 8672 --- [lunna-backend] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-06T23:58:59.283-03:00  INFO 8672 --- [lunna-backend] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-06T23:58:59.352-03:00  WARN 8672 --- [lunna-backend] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-06T23:58:59.364-03:00  INFO 8672 --- [lunna-backend] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-06T23:59:00.090-03:00  INFO 8672 --- [lunna-backend] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table tb_dados_menstruais 
+       add column tempo_ciclo_menstrual_em_dias integer
+Hibernate: 
+    alter table tb_notificacao 
+       modify column mensagem varchar(255)
+Hibernate: 
+    alter table tb_usuario 
+       drop index UKspmnyb4dsul95fjmr5kmdmvub
+Hibernate: 
+    alter table tb_usuario 
+       add constraint UKspmnyb4dsul95fjmr5kmdmvub unique (email)
+2025-11-06T23:59:00.224-03:00  INFO 8672 --- [lunna-backend] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-06T23:59:00.555-03:00  INFO 8672 --- [lunna-backend] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name servicoUsuario
+2025-11-06T23:59:01.282-03:00  INFO 8672 --- [lunna-backend] [    Test worker] b.e.u.l.LunnaBackendApplicationTests     : Started LunnaBackendApplicationTests in 4.063 seconds (process running for 5.18)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
