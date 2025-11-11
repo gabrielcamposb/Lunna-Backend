@@ -2,7 +2,7 @@ package br.edu.unex.lunna.service;
 
 import br.edu.unex.lunna.domain.Usuario;
 import br.edu.unex.lunna.domain.enums.Cargo;
-import br.edu.unex.lunna.dto.RegistroDTO;
+import br.edu.unex.lunna.dto.RequisicaoRegistro;
 import br.edu.unex.lunna.repository.UsuarioRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -33,7 +33,7 @@ public class ServicoUsuario implements UserDetailsService {
     }
 
     @Transactional
-    public Usuario registrar(RegistroDTO dto) {
+    public Usuario registrar(RequisicaoRegistro dto) {
         if (usuarioRepository.existsByEmail(dto.getEmail())) {
             throw new RuntimeException("Email já cadastrado!");
         }
@@ -51,5 +51,4 @@ public class ServicoUsuario implements UserDetailsService {
     public Optional<Usuario> buscarPorEmail(String email) {
         return usuarioRepository.findByEmail(email);
     }
-
 }

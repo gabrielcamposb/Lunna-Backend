@@ -1,7 +1,5 @@
 package br.edu.unex.lunna.config;
 
-import br.edu.unex.lunna.service.ServicoJwtToken;
-import br.edu.unex.lunna.service.ServicoUsuario;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +10,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -20,8 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @RequiredArgsConstructor
 public class ConfiguracaoSeguranca {
 
-    private final ServicoJwtToken servicoJwtToken;
-    private final ServicoUsuario servicoUsuario;
+    private final FiltroJwtToken filtroJwtToken;
 
     @Bean
     public AuthenticationManager gerenciadorAutenticacao(AuthenticationConfiguration configuracao)
@@ -31,21 +29,23 @@ public class ConfiguracaoSeguranca {
 
     @Bean
     public SecurityFilterChain filtroSeguranca(HttpSecurity http) throws Exception {
-        FiltroJwtToken filtroJwtToken = new FiltroJwtToken(servicoJwtToken, servicoUsuario);
-
-        http
-                .csrf(AbstractHttpConfigurer::disable)
+        http.csrf(AbstractHttpConfigurer::disable)
+                .sessionManagement(session -> session.sessionCreationPolicy
+                        (SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/registrar", "/auth/login").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/me").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/ciclos/**").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/ciclos/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/ciclos/**").authenticated()
                         .anyRequest().authenticated()
                 )
                 .formLogin(AbstractHttpConfigurer::disable)
                 .httpBasic(AbstractHttpConfigurer::disable)
-                .addFilterBefore(filtroJwtToken, UsernamePasswordAuthenticationFilter.class);
-
-        http.headers(headers -> headers.frameOptions(HeadersConfigurer
-                .FrameOptionsConfig::sameOrigin));
+                .addFilterBefore(filtroJwtToken, UsernamePasswordAuthenticationFilter.class)
+                .headers(headers -> headers.frameOptions(HeadersConfigurer
+                        .FrameOptionsConfig::sameOrigin));
 
         return http.build();
     }
