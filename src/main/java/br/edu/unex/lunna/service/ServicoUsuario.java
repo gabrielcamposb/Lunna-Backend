@@ -2,22 +2,27 @@ package br.edu.unex.lunna.service;
 
 import br.edu.unex.lunna.domain.Usuario;
 import br.edu.unex.lunna.domain.enums.Cargo;
-import br.edu.unex.lunna.dto.RegistroDTO;
+import br.edu.unex.lunna.dto.RequisicaoRegistro;
 import br.edu.unex.lunna.repository.UsuarioRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class ServicoUsuario implements UserDetailsService {
 
     private final UsuarioRepository usuarioRepository;
-    private final PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
@@ -28,7 +33,7 @@ public class ServicoUsuario implements UserDetailsService {
     }
 
     @Transactional
-    public Usuario registrar(RegistroDTO dto) {
+    public Usuario registrar(RequisicaoRegistro dto) {
         if (usuarioRepository.existsByEmail(dto.getEmail())) {
             throw new RuntimeException("Email já cadastrado!");
         }
@@ -41,5 +46,9 @@ public class ServicoUsuario implements UserDetailsService {
         usuario.setCargo(Cargo.USUARIO);
 
         return usuarioRepository.save(usuario);
+    }
+
+    public Optional<Usuario> buscarPorEmail(String email) {
+        return usuarioRepository.findByEmail(email);
     }
 }

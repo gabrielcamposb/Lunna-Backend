@@ -1,19 +1,22 @@
 package br.edu.unex.lunna.mapper;
 
 import br.edu.unex.lunna.domain.Usuario;
-import br.edu.unex.lunna.dto.RespostaUsuario;
+import br.edu.unex.lunna.dto.UsuarioResponseDTO;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MapeadorUsuario {
-    public RespostaUsuario paraDto(Usuario usuario) {
+
+    public UsuarioResponseDTO paraDto(Usuario usuario) {
         if (usuario == null)
             return null;
 
-        return new RespostaUsuario(
-                usuario.getId(),
-                usuario.getEmail(),
-                usuario.getCargo().name()
-        );
+        return UsuarioResponseDTO.builder()
+                .id(usuario.getId())
+                .nome(usuario.getNome())
+                .apelido(usuario.getApelido())
+                .email(usuario.getEmail())
+                .cargo(usuario.getCargo())
+                .build();
     }
 }

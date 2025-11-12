@@ -1,10 +1,10 @@
 package br.edu.unex.lunna.controller;
 
+import br.edu.unex.lunna.config.JwtService;
 import br.edu.unex.lunna.domain.Usuario;
-import br.edu.unex.lunna.dto.LoginDTO;
-import br.edu.unex.lunna.dto.RegistroDTO;
+import br.edu.unex.lunna.dto.RequisicaoAuth;
+import br.edu.unex.lunna.dto.RequisicaoRegistro;
 import br.edu.unex.lunna.service.ServicoUsuario;
-import br.edu.unex.lunna.service.ServicoJwtToken;
 import br.edu.unex.lunna.service.DetalhesUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,16 +27,16 @@ public class ControladorAuth {
     private ServicoUsuario servicoUsuario;
 
     @Autowired
-    private ServicoJwtToken servicoJwtToken;
+    private JwtService jwtService;
 
     @PostMapping("/registrar")
-    public ResponseEntity<?> registrar(@RequestBody RegistroDTO dto) {
+    public ResponseEntity<?> registrar(@RequestBody RequisicaoRegistro dto) {
         Usuario usuario = servicoUsuario.registrar(dto);
         return ResponseEntity.ok(usuario);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginDTO loginDTO) {
+    public ResponseEntity<?> login(@RequestBody RequisicaoAuth loginDTO) {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(loginDTO.getEmail(), loginDTO.getSenha())
@@ -45,22 +45,27 @@ public class ControladorAuth {
             DetalhesUsuario detalhesUsuario =
                     (DetalhesUsuario) servicoUsuario.loadUserByUsername(loginDTO.getEmail());
 
-            String token = servicoJwtToken.gerarToken(
-                    detalhesUsuario.getUsername(),
-                    detalhesUsuario.getAuthorities().iterator().next().getAuthority()
-            );
+            String token = jwtService.gerarToken(detalhesUsuario);
 
-            return ResponseEntity.ok(Map.of("token", token));
+            return ResponseEntity.ok(Map.of(
+                    "token", token,
+                    "email", detalhesUsuario.getUsername(),
+                    "cargo", detalhesUsuario.getAuthorities().iterator().next().getAuthority()
+            ));
 
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciais inválidas");
+            return ResponseEntity.status(401).body("Credenciais inválidas!");
         }
     }
 
+    @GetMapping("/usuario")
+    public ResponseEntity<?> obterUsuarioAutenticado(Authentication authentication) {
+        if (authentication == null || !authentication.isAuthenticated()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Usuário não autenticado");
+        }
 
-    @GetMapping("/me")
-    public ResponseEntity<?> me(Authentication authentication) {
-        DetalhesUsuario detalhesUsuario = (DetalhesUsuario) authentication.getPrincipal();
-        return ResponseEntity.ok(detalhesUsuario);
+        DetalhesUsuario detalhes = (DetalhesUsuario) authentication.getPrincipal();
+        return ResponseEntity.ok(detalhes.getUsuario());
     }
+
 }

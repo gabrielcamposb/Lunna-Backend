@@ -11,16 +11,21 @@ import java.util.List;
 
 @Entity
 @Table(name = "tb_dados_menstruais")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor @Builder
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class DadosMenstruais {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private LocalDate dataInicioCiclo;
+    private LocalDate dataFimCiclo;
+    private Integer duracaoCicloEmDias;
     private LocalDate dataNascimento;
-
     private boolean usaMetodoContraceptivo;
 
     @Enumerated(EnumType.STRING)
@@ -29,15 +34,14 @@ public class DadosMenstruais {
     @Enumerated(EnumType.STRING)
     private IntervaloPilula intervaloPilula;
 
-    @Column(name = "data_inicio_pilula")
     private LocalDate dataInicioPilula;
-
     private LocalDate dataUltimaMenstruacao;
-
-    @Column(name = "tempo_ciclo_menstrual_em_dias")
-    private Integer duracaoCicloEmDias;
 
     @Builder.Default
     @OneToMany(mappedBy = "dadosMenstruais", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CicloMenstrual> ciclos = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
 }

@@ -20,6 +20,10 @@ public class Notificacao {
     private String mensagem;
     private String icone;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
+
     private LocalDateTime dataEnvio;
 
     @Enumerated(EnumType.STRING)
