@@ -36,12 +36,8 @@ public class ServicoDadosMenstruais {
         List<DadosMenstruais> dados = listarPorUsuario(usuarioId);
         if (dados.isEmpty()) throw new RuntimeException("Nenhum ciclo cadastrado.");
 
+        double mediaDuracao = dados.stream().mapToInt(DadosMenstruais::getDuracaoCicloEmDias).average().orElse(28);
         DadosMenstruais ultimo = dados.get(dados.size() - 1);
-
-        if (ultimo.getDataInicioCiclo() == null || ultimo.getDuracaoCicloEmDias() == null) {
-            throw new RuntimeException("Dados incompletos para prever o próximo ciclo.");
-        }
-
-        return ultimo.getDataInicioCiclo().plusDays(ultimo.getDuracaoCicloEmDias());
+        return ultimo.getDataInicioCiclo().plusDays((long) mediaDuracao);
     }
 }
