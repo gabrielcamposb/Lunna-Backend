@@ -40,7 +40,6 @@ public class Usuario {
     @Column(nullable = false)
     private Cargo cargo;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "dados_menstruais_id")
+    @OneToOne(mappedBy = "usuario")
     private DadosMenstruais dadosMenstruais;
 }

@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface CicloMenstrualRepository extends JpaRepository<CicloMenstrual, Long> {
-    List<CicloMenstrual> findByDadosMenstruaisId(Long dadosId);
+    List<CicloMenstrual> findByDadosMenstruaisUsuarioId(Long usuarioId);
 }

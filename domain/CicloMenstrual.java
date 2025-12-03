@@ -12,6 +12,7 @@ import java.util.List;
 @Table(name = "tb_ciclo_menstrual")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor @Builder
+@Data
 public class CicloMenstrual {
 
     @Id
@@ -20,13 +21,13 @@ public class CicloMenstrual {
 
     private LocalDate dataInicio;
 
-    private int duracaoDias;
+    private Integer duracaoDias;
 
     @Enumerated(EnumType.STRING)
     private FaseMenstrual faseAtual;
 
-    @ManyToOne
-    @JoinColumn(name = "dados_menstruais_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "dados_menstruais_id", nullable = false)
     private DadosMenstruais dadosMenstruais;
 
     @Builder.Default

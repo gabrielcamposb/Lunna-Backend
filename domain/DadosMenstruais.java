@@ -41,7 +41,7 @@ public class DadosMenstruais {
     @OneToMany(mappedBy = "dadosMenstruais", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<CicloMenstrual> ciclos = new ArrayList<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id", nullable = false)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 }

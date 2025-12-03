@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80e0d297-723d-404e-a116-1370256494f3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/BeanConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/FiltroJwtToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/controller/NotificacaoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/controller/SintomaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/DadosMenstruaisDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/DadosMenstruaisResumoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/SintomaDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/UsuarioResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/ServicoNotificacao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/ServicoSintoma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/LunnaBackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/LunnaBackendApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/config/ConfiguracaoJwt.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/config/ConfiguracaoJwt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/config/ConfiguracaoSeguranca.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/config/ConfiguracaoSeguranca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/config/JwtConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/controller/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/controller/ControladorAuth.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/controller/ControladorAuth.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/CicloMenstrual$CicloMenstrualBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/CicloMenstrual$CicloMenstrualBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/CicloMenstrual.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/CicloMenstrual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/DadosMenstruais$DadosMenstruaisBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/DadosMenstruais$DadosMenstruaisBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/DadosMenstruais.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/DadosMenstruais.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/MenstrualCycle$MenstrualCycleBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/MenstrualCycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/MenstrualData$MenstrualDataBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/MenstrualData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Notificacao$NotificacaoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Notificacao$NotificacaoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Notificacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Notificacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Notification$NotificationBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Notification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Symptom$SymptomBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Symptom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/User$UserBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/enums/ContraceptiveMethod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/enums/CyclePhase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/enums/Intensity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/enums/NotificationType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/enums/PillInterval.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/enums/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/domain/enums/SymptomType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/dto/AuthRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/dto/AuthResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/dto/RegisterRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/dto/RequisicaoRegistro.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/dto/RequisicaoRegistro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/dto/RespostaUsuario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/dto/UserResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/mapper/MapeadorUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/mapper/MapeadorUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/CicloMenstrualRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/CicloMenstrualRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/DadosMenstruaisRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/DadosMenstruaisRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/MenstrualCycleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/MenstrualDataRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/NotificacaoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/NotificacaoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/NotificationRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/SintomaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/SintomaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/SymptomRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/service/DetalhesUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/service/DetalhesUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/service/JwtTokenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/service/ServicoJwtToken.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/service/ServicoUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/service/ServicoUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/service/UserDetailsImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/br/edu/unex/lunna/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/AuthController.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MenstrualCycle$MenstrualCycleBuilder.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MenstrualCycle.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MenstrualCycleRepository.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfig$1.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfig.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Symptom$SymptomBuilder.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/Symptom.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SymptomRepository.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserMapper.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserResponse.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserService.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/LunnaBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/LunnaBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/ConfiguracaoJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/ConfiguracaoJwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/ConfiguracaoSeguranca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/ConfiguracaoSeguranca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/JwtConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/controller/ControladorAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/controller/ControladorAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/CicloMenstrual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/CicloMenstrual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/DadosMenstruais.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/DadosMenstruais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/Notificacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/Notificacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/Notification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/enums/NotificationType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/domain/enums/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/AuthRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/RequisicaoRegistro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/RequisicaoRegistro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/RespostaUsuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/dto/UserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/mapper/MapeadorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/mapper/MapeadorUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/CicloMenstrualRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/CicloMenstrualRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/DadosMenstruaisRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/DadosMenstruaisRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/MenstrualCycleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/MenstrualDataRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/NotificacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/NotificacaoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/NotificationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/SintomaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/SintomaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/SymptomRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/DetalhesUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/DetalhesUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/JwtTokenService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/ServicoJwtToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/ServicoUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/ServicoUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/UserDetailsImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/edu/unex/lunna/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lunna" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="33qz6ExQ6fry3Awh5bsbFKomV7K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Lunna-Backend-main [:br.edu.unex.lunna.LunnaBackendApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/draax/Downloads/Lunna-Backend-main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="LunnaBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.edu.unex.lunna.LunnaBackendApplication" />
+      <module name="lunna.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.edu.unex.lunna.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LunnaBackendApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80e0d297-723d-404e-a116-1370256494f3" name="Changes" comment="" />
+      <created>1760059213819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760059213819</updated>
+    </task>
+    <task id="LOCAL-00001" summary="mudando a inicialização do array list">
+      <option name="closed" value="true" />
+      <created>1761099935603</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761099935604</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mudando a inicialização do array list">
+      <option name="closed" value="true" />
+      <created>1761099958283</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761099958283</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".gitattributes" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mudando a inicialização do array list" />
+    <option name="LAST_COMMIT_MESSAGE" value="mudando a inicialização do array list" />
+  </component>
+</project>
