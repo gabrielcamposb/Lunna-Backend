@@ -43,8 +43,20 @@ public class SintomaController {
         if (auth == null || !auth.isAuthenticated()) {
             return ResponseEntity.status(401).body("Usuário não autenticado");
         }
-        List<Sintoma> sintomas = servicoSintoma.listarPorCiclo(cicloId);
-        return ResponseEntity.ok(sintomas);
+
+        List<SintomaDTO> sintomasDTO = servicoSintoma.listarPorCiclo(cicloId)
+                .stream()
+                .map(s -> SintomaDTO.builder()
+                        .id(s.getId())
+                        .dataRegistro(s.getDataRegistro())
+                        .tipo(s.getTipo())
+                        .intensidade(s.getIntensidade())
+                        .cicloId(s.getCicloMenstrual().getId())
+                        .build()
+                )
+                .toList();
+
+        return ResponseEntity.ok(sintomasDTO);
     }
 
     @GetMapping("/resumo/{cicloId}")

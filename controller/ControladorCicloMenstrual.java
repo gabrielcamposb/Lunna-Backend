@@ -1,10 +1,12 @@
 package br.edu.unex.lunna.controller;
 
 import br.edu.unex.lunna.domain.DadosMenstruais;
+import br.edu.unex.lunna.domain.Sintoma;
 import br.edu.unex.lunna.domain.Usuario;
 import br.edu.unex.lunna.dto.DadosMenstruaisDTO;
 import br.edu.unex.lunna.dto.DadosMenstruaisResumoDTO;
 import br.edu.unex.lunna.service.ServicoDadosMenstruais;
+import br.edu.unex.lunna.service.ServicoSintoma;
 import br.edu.unex.lunna.service.ServicoUsuario;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
